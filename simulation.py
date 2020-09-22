@@ -32,8 +32,16 @@ def simulation():
 
     print("The dataset has been simulated successfully. Here are some statistics:")
     print(
-        "There are %i pop, %i rock and %i techno songs across %i playlists with a total of %i songs."
-        % (genres_index[0], genres_index[1], genres_index[2], len(playlists), len(playlists)*len(playlists[0]))
+        "There are %i pop, %i rock and %i techno songs."
+        % (genres_index[0], genres_index[1], genres_index[2])
+    )
+    print(
+        "%i happy, %i party, %i calming and %i lounge songs."
+        % (moods_index[0], moods_index[1], moods_index[2], moods_index[2])
+    )
+    print(
+        "All of these across %i playlists with a total of %i songs."
+        % (len(playlists), len(playlists) * len(playlists[0]))
     )
 
 
