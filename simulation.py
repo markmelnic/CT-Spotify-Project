@@ -46,6 +46,16 @@ def simulation():
         % (len(playlists), len(playlists) * len(playlists[0]))
     )
 
+    # generate te users
+    users = []
+    for i in range(100):
+        user = []
+        for i in range(randint(40, 200)):
+            user.append(playlists[randint(0, 99)][randint(0, 49)])
+        users.append(user)
+
+    return playlists, users
+
 
 if __name__ == "__main__":
     simulation()
