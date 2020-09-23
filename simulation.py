@@ -57,7 +57,7 @@ def simulation():
         total_listened += len(user)
 
     print(
-        "- The %i user who listened to a total of %i songs.\n"
+        "- The %i users listened to a total of %i songs.\n"
         % (len(users), total_listened)
     )
 
