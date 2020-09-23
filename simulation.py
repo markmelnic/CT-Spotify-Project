@@ -51,7 +51,7 @@ def simulation():
     users = []
     for i in range(100):
         user = []
-        for i in range(randint(40, 200)):
+        for i in range(randint(150, 1000)):
             user.append(playlists[randint(0, 99)][randint(0, 49)])
         users.append(user)
         total_listened += len(user)
