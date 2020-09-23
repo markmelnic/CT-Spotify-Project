@@ -1,7 +1,7 @@
 from random import sample
 
 
-def week1(playlists, users):
+def week1(playlists, users, user_number):
     recommendations = []
     for user in users:
         for playlist in playlists:
@@ -16,7 +16,9 @@ def week1(playlists, users):
                 except ValueError:
                     pass
 
-    for i in range(100):
-        print("User %i was recommended: " % (i + 1), recommendations[i])
+    #for i in range(100):
+    #    print("User %i was recommended: " % (i + 1), recommendations[i])
+    print("- In the first week, you have been recommended the following songs:")
+    print(recommendations[user_number])
 
     return recommendations
