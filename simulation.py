@@ -32,27 +32,34 @@ def simulation():
             playlist.append(song)
         playlists.append(playlist)
 
-    print("The dataset has been simulated successfully. Here are some statistics:")
+    print("\nThe dataset has been simulated successfully. Here are some statistics:")
     print(
-        "There are %i pop, %i rock and %i techno songs."
+        "- There are %i pop, %i rock and %i techno songs."
         % (genres_index[0], genres_index[1], genres_index[2])
     )
     print(
-        "%i happy, %i party, %i calming and %i lounge songs."
+        "- %i happy, %i party, %i calming and %i lounge songs."
         % (moods_index[0], moods_index[1], moods_index[2], moods_index[2])
     )
     print(
-        "All of these across %i playlists with a total of %i songs."
+        "- All of these across %i playlists with a total of %i songs."
         % (len(playlists), len(playlists) * len(playlists[0]))
     )
 
-    # generate te users
+    total_listened = 0
+    # generate the users
     users = []
     for i in range(100):
         user = []
         for i in range(randint(40, 200)):
             user.append(playlists[randint(0, 99)][randint(0, 49)])
         users.append(user)
+        total_listened += len(user)
+
+    print(
+        "- The %i user who listened to a total of %i songs.\n"
+        % (len(users), total_listened)
+    )
 
     return playlists, users
 
