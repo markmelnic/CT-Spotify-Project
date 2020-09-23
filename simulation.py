@@ -1,4 +1,4 @@
-from random import sample
+from random import sample, randint
 
 GENRES = ["pop", "rock", "techno"]
 MOODS = ["happy", "party", "calming", "lounge"]
@@ -7,25 +7,27 @@ MOODS = ["happy", "party", "calming", "lounge"]
 def simulation():
     genres_index = [0, 0, 0]
     moods_index = [0, 0, 0, 0]
+
+    # generate the playlists
     playlists = []
     for i in range(100):
         playlist = []
-        for i in range(50):
-            song = (sample(GENRES, 1)[0], sample(MOODS, 1)[0])
-            if song[0] == GENRES[0]:
+        for j in range(50):
+            song = (str(i) + "-" + str(j), sample(GENRES, 1)[0], sample(MOODS, 1)[0])
+            if song[1] == GENRES[0]:
                 genres_index[0] += 1
-            elif song[0] == GENRES[1]:
+            elif song[1] == GENRES[1]:
                 genres_index[1] += 1
-            elif song[0] == GENRES[2]:
+            elif song[1] == GENRES[2]:
                 genres_index[2] += 1
 
-            if song[1] == MOODS[0]:
+            if song[2] == MOODS[0]:
                 moods_index[0] += 1
-            elif song[1] == MOODS[1]:
+            elif song[2] == MOODS[1]:
                 moods_index[1] += 1
-            elif song[1] == MOODS[2]:
+            elif song[2] == MOODS[2]:
                 moods_index[2] += 1
-            elif song[1] == MOODS[3]:
+            elif song[2] == MOODS[3]:
                 moods_index[3] += 1
             playlist.append(song)
         playlists.append(playlist)
