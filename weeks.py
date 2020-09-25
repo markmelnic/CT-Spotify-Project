@@ -16,9 +16,13 @@ def week1(playlists, users, user_number):
                 except ValueError:
                     pass
 
-    #for i in range(100):
+    # for i in range(100):
     #    print("User %i was recommended: " % (i + 1), recommendations[i])
     print("- In the first week, you have been recommended the following songs:")
     print(recommendations[user_number])
 
     return recommendations
+
+
+def week2(playlists, users, user_number):
+    pass

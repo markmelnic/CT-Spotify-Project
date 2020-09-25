@@ -65,7 +65,7 @@ def simulation():
     user_number = randint(0, 99)
     print(
         "For the purpose of the experiment you have been randomly selected to be user number %i."
-        % (user_number+1)
+        % (user_number + 1)
     )
 
     return playlists, users, user_number
