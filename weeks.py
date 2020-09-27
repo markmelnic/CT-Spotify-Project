@@ -1,6 +1,7 @@
 from random import sample
+from simulation import MOODS, GENRES
 
-
+# week one recommendation function
 def week1(playlists, users, user_number):
     recommendations = []
     for user in users:
@@ -24,5 +25,16 @@ def week1(playlists, users, user_number):
     return recommendations
 
 
+# week two recommendation function
 def week2(playlists, users, user_number):
-    pass
+    recommendations = []
+    for user in users:
+        genres_index = [0, 0, 0]
+        for song in user:
+            if song[1] == GENRES[0]:
+                genres_index[0] += 1
+            elif song[1] == GENRES[1]:
+                genres_index[1] += 1
+            elif song[1] == GENRES[2]:
+                genres_index[2] += 1
+    print(genres_index)
