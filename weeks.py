@@ -55,3 +55,5 @@ def week2(playlists, users, user_number):
         % GENRES[max_genre]
     )
     print(recommendations[user_number])
+
+    return recommendations
