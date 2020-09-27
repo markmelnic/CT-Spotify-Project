@@ -64,7 +64,7 @@ def simulation():
     # assign random user number for the purpose of the experiment
     user_number = randint(0, 99)
     print(
-        "For the purpose of the experiment you have been randomly selected to be user number %i."
+        "For the purpose of this simulation, you have been randomly selected to be user number %i."
         % (user_number + 1)
     )
 
