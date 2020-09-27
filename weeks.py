@@ -57,3 +57,39 @@ def week2(playlists, users, user_number):
     print(recommendations[user_number])
 
     return recommendations
+
+
+# week three recommendation function based on mood
+def week3(playlists, users, user_number):
+    recommendations = []
+    for user in users:
+        moods_index = [0, 0, 0, 0]
+        for song in user:
+            if song[2] == MOODS[0]:
+                moods_index[0] += 1
+            elif song[2] == MOODS[1]:
+                moods_index[1] += 1
+            elif song[2] == MOODS[2]:
+                moods_index[2] += 1
+            elif song[2] == MOODS[3]:
+                moods_index[3] += 1
+        max_mood = moods_index.index(max(moods_index))
+
+        recommended = []
+        for playlist in playlists:
+            for song in playlist:
+                if song[2] == MOODS[max_mood]:
+                    recommended.append(song)
+                if len(recommended) > 4:
+                    recommendations.append(recommended)
+                    break
+            if len(recommended) > 4:
+                break
+
+    print(
+        "- In the thrid week, you have been recommended the following %s songs:"
+        % MOODS[max_mood]
+    )
+    print(recommendations[user_number])
+
+    return recommendations
