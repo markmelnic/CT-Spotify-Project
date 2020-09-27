@@ -52,7 +52,7 @@ def week2(playlists, users, user_number):
 
     print(
         "- In the second week, you have been recommended the following %s songs:"
-        % GENRES[max_genre]
+        % recommendations[user_number][0][1]
     )
     print(recommendations[user_number])
 
@@ -88,7 +88,7 @@ def week3(playlists, users, user_number):
 
     print(
         "- In the thrid week, you have been recommended the following %s songs:"
-        % MOODS[max_mood]
+        % recommendations[user_number][0][2]
     )
     print(recommendations[user_number], "\n")
 
