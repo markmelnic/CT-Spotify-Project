@@ -90,6 +90,6 @@ def week3(playlists, users, user_number):
         "- In the thrid week, you have been recommended the following %s songs:"
         % MOODS[max_mood]
     )
-    print(recommendations[user_number])
+    print(recommendations[user_number], "\n")
 
     return recommendations
