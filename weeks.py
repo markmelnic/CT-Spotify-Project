@@ -25,7 +25,7 @@ def week1(playlists, users, user_number):
     return recommendations
 
 
-# week two recommendation function
+# week two recommendation function based on genre
 def week2(playlists, users, user_number):
     recommendations = []
     for user in users:
@@ -37,4 +37,21 @@ def week2(playlists, users, user_number):
                 genres_index[1] += 1
             elif song[1] == GENRES[2]:
                 genres_index[2] += 1
-    print(genres_index)
+        max_genre = genres_index.index(max(genres_index))
+
+        recommended = []
+        for playlist in playlists:
+            for song in playlist:
+                if song[1] == GENRES[max_genre]:
+                    recommended.append(song)
+                if len(recommended) > 4:
+                    recommendations.append(recommended)
+                    break
+            if len(recommended) > 4:
+                break
+
+    print(
+        "- In the second week, you have been recommended the following %s songs:"
+        % GENRES[max_genre]
+    )
+    print(recommendations[user_number])
