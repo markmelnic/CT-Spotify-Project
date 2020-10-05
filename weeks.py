@@ -2,7 +2,7 @@ from random import sample
 from simulation import MOODS, GENRES
 
 # week one recommendation function
-def week1(playlists, users, user_number):
+def week1(playlists: list, users: list, user_number: int) -> list:
     recommendations = []
     for user in users:
         for playlist in playlists:
@@ -26,7 +26,7 @@ def week1(playlists, users, user_number):
 
 
 # week two recommendation function based on genre
-def week2(playlists, users, user_number):
+def week2(playlists: list, users: list, user_number: int) -> list:
     recommendations = []
     for user in users:
         genres_index = [0, 0, 0]
@@ -60,7 +60,7 @@ def week2(playlists, users, user_number):
 
 
 # week three recommendation function based on mood
-def week3(playlists, users, user_number):
+def week3(playlists: list, users: list, user_number: int) -> list:
     recommendations = []
     for user in users:
         moods_index = [0, 0, 0, 0]
