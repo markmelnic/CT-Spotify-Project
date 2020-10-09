@@ -44,7 +44,7 @@ def simulation():
     # print the results of the simulation
     print("\nThe dataset has been simulated successfully.")
     print(
-        "- There are %i pop, %i rock and %i techno songs."
+        "- It contains %i pop, %i rock and %i techno songs."
         % (genres_index[0], genres_index[1], genres_index[2])
     )
     print(
